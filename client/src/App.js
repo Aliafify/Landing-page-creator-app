@@ -154,7 +154,7 @@ function App() {
                   }
 
                   <Route
-                    path={'/Dashboard/' + user.url}
+                    path={'/' + user.url}
                     element=
                     {<Lpage style={user.style}
                       content={user.content}

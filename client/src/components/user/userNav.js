@@ -11,7 +11,7 @@ function UserNav(props) {
 
 
      <Link className="nav-page"
-    to={props.url}>
+    to={"/"+props.url}>
         صفحتي</Link> 
 
 
