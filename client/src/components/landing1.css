@@ -1,0 +1,132 @@
+.cont{
+    background-repeat: no-repeat;
+    background-size:cover;
+   
+    direction: ltr;
+    
+    }
+    .i{
+        
+    }
+   
+    .l{
+    
+    height:100px  ;
+    width: 100px;
+    margin-bottom: 1.5rem;
+    border-radius: 70px;
+
+    }
+    .rtl{
+        padding-right:6% ;
+        float: right;
+        
+    }
+    .block{
+        display: flex !important;
+        flex-direction: column !important;
+        direction: rtl ;
+        justify-content:right;
+        align-items:flex-start;
+    }
+     .title{
+    height: 80px
+    ;font-size: 30px;
+    display: flex;
+    
+    }
+    .disc-cont{
+        height: 200px; 
+    }
+    .discription{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    
+    height: 200px ;
+    width:400px ;
+    } 
+    .phone a {
+        border-radius: 20px;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: middle;
+        background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    line-height: 36px;
+    margin: 2% 0px;
+    line-height: 46px;
+    text-decoration: none;
+    width:150px ;
+    height: 55px;
+    text-align: center;
+    box-shadow: 0px 0px 3px 1px;
+    }
+    
+    @media screen and (max-width: 750px) {
+     .phone a  {
+        border-radius: 50px;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: middle;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin: 2% 0px;
+    line-height: 20px;
+    text-decoration: none;
+    width:140px ;
+    height: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 2px;
+    margin: 10px;
+     }  
+     .contscts{
+         display: flex;
+        flex-direction: column !important;
+        align-items: center;
+     }
+     .l{
+         margin-top: 20px;
+     }
+     .block{
+        display: flex !important;
+        flex-direction: column !important;
+        
+        justify-content:center;
+        align-items:center;
+    }
+
+    }
+
+
+    .footer{
+    
+    color: #fff;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+
+    } 
+    .contscts{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-content:flex-end;
+        width: 100%;
+         margin-top: 165px;
+         margin-bottom: 60px;
+         
+
+        
+    }
+    .bg{
+        background-color: #fff;
+        
+    }
+    .padding{
+       padding: 10px; 
+    }

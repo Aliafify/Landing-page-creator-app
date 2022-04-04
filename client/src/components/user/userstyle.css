@@ -1,0 +1,169 @@
+.cont{
+    
+    color: black;
+}
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 190px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    text-align: center;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav-cont{width: 100%;}
+  /* Style page content */
+  .main {
+    margin-right: 190px; /* Same as the width of the sidebar */
+    
+    padding: 0px 10px 0px 10px;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .header-cont{
+      background-color: rgba(255, 255, 255, 0);
+  }
+  .user-header{
+      background-color: rgba(0, 0, 0, 0.571);
+      color: wheat;
+      width: 100%;
+      height:60px;
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      
+  }
+  .enable-following {
+      /* font-size: 2vw; */
+      
+       padding: 20px; 
+       direction: rtl; 
+     }
+     .flex-c-r{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items:flex-start;
+     }
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.flex-h-space-arround{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 15px 5px 15px 5px;
+
+}
+.flex-v-space-between{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+
+}
+.flex-h-space-between{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 33px;
+
+}
+section{
+    background-color: rgba(255, 255, 255, 0.863);
+    color: #999;
+    margin: 15px 0px 15px 0px;
+    border:1px  solid #000000c3;
+    box-shadow: 1px 2px 3px;
+    
+}
+.stat{
+    height: 130px;
+    width:25%;
+    margin: 10px 0px 10px 0px;
+    background-color: rgb(249, 249, 250);
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px;
+    
+}
+
+.hint{
+width: 200px;
+margin:0px 30px 0px 20px;
+
+
+}
+.quick-links{
+    cursor: pointer;
+    background-color: #000000ef;
+    font-size: 0.9rem;
+    padding: 5px;
+    border-radius: 4px;
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+    margin:0px 0px 0px 20px; 
+    box-shadow: 0 1.6px 2px 0.4px rgb(255, 255, 255);   
+}
+.quick-links:hover{
+    motion: 22deg;
+    background-color: #818181d8;
+    transition: 1s;
+}
+.blc{
+    border-bottom:1px solid rgb(255, 255, 255);
+    height: 50px;
+    
+}
+.sidenav a{
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+}
+.logOut{
+    display: block !important;
+    height: 40px !important;
+}
+.whats-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.paypal-icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 20px;  
+}
+.whats-icon-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 20px;
+}

@@ -1,0 +1,8 @@
+ <Router>
+       <Routes>
+     
+     <Route exact path='/' >
+       <Home/>
+       </Route>
+     </Routes>
+       </Router>
