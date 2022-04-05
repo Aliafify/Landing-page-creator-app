@@ -184,12 +184,8 @@ function App() {
               )}
               </Fragment>
             )
-
           }
-
-
-
-          <Route path="*" element={<Navigate to={auth && '/dashboard/'} />} />
+            {/* <Route path="*" element={<Navigate to={auth && '/dashboard/'} />} /> */}
 
 
         </Routes>

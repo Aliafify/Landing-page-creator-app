@@ -12,10 +12,8 @@ const navigate=useNavigate();
                     /*handelLogin */
 const handelLogin=(e)=>{
       e.preventDefault(); 
-  
       const credentials= {id:trialuser,pass:pass};
       try{
- 
         fetch("/login",{
           method:"post",
           credentials:"same-origin",
@@ -29,8 +27,8 @@ const handelLogin=(e)=>{
             const res=  await response.json();
              await setUser(res);
              await setAuth(true);
-            
-             navigate("/Dashboard");
+            res.role==="user"?
+             navigate("/dashboard"):navigate("/admin-dashboard")
           }
           else{
             const res=  await response.text();

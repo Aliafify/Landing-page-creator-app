@@ -13,6 +13,7 @@ const Lpage = (props) => {
 
     const [style, content, phone] = [user.style, user.content, user.phone];
     const whLink = `https://api.whatsapp.com/send/?phone=%2B${content.whatsapp}&text&app_absent=0`
+    const phoneLink=`tel:${phone}`
     useEffect(() => {
 
     }, [user])
@@ -75,7 +76,7 @@ const Lpage = (props) => {
                     <div className="contscts">
 
                         <Buttonlink handlechange={handlechange} link={whLink} name="whatsapp" icon={whatsapp} display={style.wh} />
-                        <Buttonlink handlechange={handlechange} link={phone} name="call us" icon={Phone} display={style.ph} />
+                        <Buttonlink handlechange={handlechange} link={phoneLink} name="call us" icon={Phone} display={style.ph} />
 
                     </div>
                 </div>
