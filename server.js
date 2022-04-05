@@ -29,15 +29,13 @@ app.use(cors());
 /* Middleware*/
 
 const bodyParser=require("body-parser");
-//const { default: mongoose } = require("mongoose");
-//const res = require("express/lib/response");
+
 
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(fileUpload());
 app.use(express.static(path.resolve(__dirname, "./client/build")));
-// Cors for cross origin allowance
 
  
 // Initialize the main project folder
@@ -153,11 +151,11 @@ app.post("/edit",editProperty);
 function editProperty(req,res){
     try{
         var property=req.body[0];
-        // const value   =req.body.value;
         const keys=Object.keys(property);
         const id=req.body[1];
         keys.map(k=>{users[id][k]=property[k]}) 
         console.log(users[id]);
+        res.send(users[id])
            
         
     }catch(err){
@@ -199,22 +197,7 @@ app.post('/upload', (req, res) => {
           
       }
   })    
-  app.post(`/ads/:id`,sendCode) 
-  function sendCode(req,res){
-      const id =req.body.id;
-      const user=users[id];
-      const adsId=user.adsId; 
-      const sendTo=user.sendTo;
-      const p =req.params;
-      
-      res.type(".js");
-      res.send(`
-     console.log("hi")
 
-      `)
-
-      //console.log(p);
-  }
   app.get(`/script/:id`,(req,res)=>{
     const id =req.params.id;
     const user=users[id];

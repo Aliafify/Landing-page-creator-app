@@ -3,7 +3,6 @@ import './landing1.css'
 import whatsapp from './assets/imgs/whatsapp.gif'
 import Phone from './assets/imgs/phone.png'
 import MetaTags from 'react-meta-tags';
-import { Helmet } from "react-helmet";
 import Buttonlink from "./user/link";
 import Ads from "./googleads";
 import { useParams } from "react-router-dom";

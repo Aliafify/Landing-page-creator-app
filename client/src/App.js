@@ -107,7 +107,7 @@ function App() {
               <Fragment> {!adminState ? (
                 <Fragment>
                   { /* User Dashboard */}
-                  <Route path={'/Dashboard'}
+                  <Route path={'/dashboard'}
                     element={<UserNav url={user.url} />}>
 
                     <Route path={''} element={<User user={user} setAuth={setAuth} />}
@@ -117,7 +117,7 @@ function App() {
                   { /* User Landing page editor open conditionally */}
                   {user.open ? (
                     <Fragment>
-                      <Route path={'/Dashboard/edit-my-page'}
+                      <Route path={'/dashboard/edit-my-page'}
                         element={
                           <CustomizeLandingPage />}>
 
@@ -143,7 +143,7 @@ function App() {
                           }
                         />
                       </Route>
-                      <Route path="/Dashboard/ads" element={<Edit p1="adsId" p2="sendTo" n1="ID" n2="'send_to': 'AW-xxxx/" type1="text" type2="text" userID={user.id} setUser={setUser} />} />
+                      <Route path="/dashboard/ads" element={<Edit p1="adsId" p2="sendTo" n1="ID" n2="'send_to': 'AW-xxxx/" type1="text" type2="text" userID={user.id} setUser={setUser} header={"اضافة ااكواد الاحالة"}/>} />
 
                     </Fragment>
                   ) : (
@@ -161,7 +161,7 @@ function App() {
                       phone={user.phone}
                       user={user} />} />
                   <Route
-                    path={'/Dashboard/upload'}
+                    path={'/dashboard/upload'}
                     element={
                       <div className='container mt-4'>
                         <h4 className='display-4 text-center mb-4'>
@@ -177,8 +177,8 @@ function App() {
               ) : (
                 /*        Admin       */
                 <>
-                  <Route path={'/Dashboard'} element={<Admin />} />
-                  <Route path={'/Dashboard/settings'} element={<Setadmin />} />
+                  <Route path={'/admin-dashboard'} element={<Admin />} />
+                  <Route path={'/admin-dashboard/settings'} element={<Setadmin />} />
                 </>
 
               )}
@@ -189,7 +189,7 @@ function App() {
 
 
 
-          <Route path="*" element={<Navigate to={auth && '/Dashboard'} />} />
+          <Route path="*" element={<Navigate to={auth && '/dashboard/'} />} />
 
 
         </Routes>

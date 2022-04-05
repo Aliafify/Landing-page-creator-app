@@ -46,7 +46,7 @@ const Table=()=>{
                     <td>{u.username}</td>
                     <td>{u.email}</td>
                     <td>{u.role}</td>
-                    <td>2011/04/25</td>
+                    <td>{u.date}</td>
                     <td>{u.phone}</td>
                     <td><Delete setUsers={setUsers} user={u}/></td>
                 </tr>

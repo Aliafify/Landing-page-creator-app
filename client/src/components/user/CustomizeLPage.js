@@ -123,11 +123,27 @@ function CustomizeLandingPage() {
                     <div>
                         <h5 className="section-header">الخلفية</h5>
                         <Upload property="background" />
+                        <hr></hr>
+                        <span>background from link</span>
+                        <input className="whats-app" type="link"
+                                name="background"
+                                onChange={(event) => onChange(event)}
+                                required></input>
+                            <input className='save' value={"save"} type="button" name="save" placeholder="save"
+                                onClick={handlechange}></input>
                     </div>
                     <hr></hr>
                     <div>
                         <h6 className="section-header">LOGO - الشعار</h6>
                         <Upload property="logo" />
+                        <hr></hr>
+                        <span>logo from link</span>
+                        <input className="whats-app" type="link"
+                                name="logo"
+                                onChange={(event) => onChange(event)}
+                                required></input>
+                            <input className='save' value={"save"} type="button" name="save" placeholder="save"
+                                onClick={handlechange}></input>
                     </div>
                     <div>
                         <hr></hr>

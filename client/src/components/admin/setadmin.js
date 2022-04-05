@@ -9,11 +9,11 @@ const Setadmin=()=>{
 <Fragment>
 <div key={"2"}>
 
-<Edit p1='email' p2="password" n1={'Email'} n2={'Password'} type1={"email"} type2={"password"} userID={User.id} setUser={setUser}/>
+<Edit p1='email' p2="password" n1={'Email'} n2={'Password'} type1={"email"} type2={"password"} userID={User.id} setUser={setUser} header={"تغيير الباسوورد او البريد الالكترونى"}/>
 </div>
 <div key={"2"}>
 
-<Edit  p1='username' p2="phone" n1={'Name'} n2={'Phone number'} type1={"text"} type2={"tel"} userID={User.id} setUser={setUser}/>
+<Edit  p1='username' p2="phone" n1={'Name'} n2={'Phone number'} type1={"text"} type2={"tel"} userID={User.id} setUser={setUser} header={"تغيير رقم الهاتف واسم الامستخدم"}/>
 </div>
 
 
