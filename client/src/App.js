@@ -185,7 +185,9 @@ function App() {
               </Fragment>
             )
           }
-            {/* <Route path="*" element={<Navigate to={auth && '/dashboard/'} />} /> */}
+            <Route path="*" element={<Navigate to={auth && !adminState && '/dashboard'} />} />
+            <Route path="*" element={<Navigate to={auth && adminState && '/admin-dashboard'} />} /> 
+            
 
 
         </Routes>
