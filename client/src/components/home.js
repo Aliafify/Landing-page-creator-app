@@ -1,7 +1,6 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useEffect, useState } from "react"
 import "./assets/vendors/themify-icons/css/themify-icons.css"
 import "./assets/css/rubic.css"
-import Avatar from './assets/imgs/avatar3.jpg';
 import Tower from './assets/imgs/eiffel-tower.svg';
 import { useNavigate } from "react-router-dom";
 
@@ -13,10 +12,21 @@ const Home = () => {
     const handelClick = () => {
         navigate("/log-in");
     };
+    const [policy,setPolicy]=useState("")
     const webSiteTitle = "Landing Page Creator";
     const discription = "صمم صفحة احترافية لشركتك أو مجال عملك من أجل جميع أنواع الاعلانات";
     const subDiscripton = "مدعمه بالسي يو وبها كل وسائل الاتصال بك بالاضافة لكل الروابط الخاصة بنشاطك مع حماية من النقرات الوهمية        "
-    const profesionalPrice = "13"
+    const profesionalPrice = "30"
+    useEffect(() => {
+        fetch('/home').then(res =>
+            res.json()    
+        ).then(data=>{setPolicy(data.policy)
+        console.log(data)
+        })
+        //   .then(data => setPolicy(data));
+    
+      }, [policy])
+      
     return (
         <div>
             <div data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -34,26 +44,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="col-md-5 d-none d-md-block">
-                                {/* <form className="header-form">
-                    <div className="head">Try your <span className="text-primary">Free</span> trial today.</div>
-                    <div className="body">
-                        <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Name*">
-                              </input>
-                        </div>
-                        <div className="form-group">
-                            <input type="email" className="form-control" placeholder="Email*">
-                            </input>
-                        </div>
-                        <div className="form-group">
-                            <input type="password" className="form-control" placeholder="Password*">
-                            </input>
-                        </div>
-                    </div>
-                    <div className="footer">
-                        <button className="btn btn-primary btn-block">Get Started</button>
-                    </div>
-                </form>  */}
+                               
                             </div>
                         </div>
                     </div>
@@ -248,54 +239,7 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                {/* <section className="section" id="review">
-    <div className="container text-center">
-        <h6 className="display-4 has-line" >WHAT OUR CUSTOMERS ARE SAYING</h6>
-        <p className="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div className="row text-left">
-            <div className="col-md-4">
-                <div className="testmonial">                        
-                    <p className="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
-                    <div className="media">
-                        <img className="mr-3" src="assets/imgs/avatar1.jpg" width="60" alt="Generic placeholder image">
-                        </img>
-                        <div className="media-body">
-                            <h6 className="title">Emma Re</h6>
-                            <p className="text-muted">Web Designer</p>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-            <div className="col-md-4">
-                <div className="testmonial">                        
-                    <p className="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
-                    <div className="media">
-                        <img className="mr-3" src={Avatar} width="60" alt="Generic placeholder image">
-                        </img>
-                        <div className="media-body">
-                            <h6 className="title">John Doe</h6>
-                            <p className="text-muted">Freelancer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="col-md-4">
-                <div className="testmonial">                        
-                    <p className="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
-                    <div className="media">
-                        <img className="mr-3" src={Avatar} width="60" alt="Generic placeholder image">
-                        </img>
-                        <div className="media-body">
-                            <h6 className="title">Emily Roe</h6>
-                            <p className="text-muted">Graphic Designer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>              
-        </div>
-    </div>
-</section> */}
-
+               
                 <section className="section " id="contact">
                     <div className="container text-center">
                         <h6 className="display-4 has-line">اتصل بنا </h6>
@@ -325,6 +269,14 @@ const Home = () => {
                             </input>
                         </form>
                     </div>
+                </section>
+                <section className="section ">
+                <div className="social-txt">
+                            <h6 className="title" id="whous">سياسة الخصوصية</h6>
+                            <p className="subtitle">
+{policy}
+                            </p>
+                        </div>
                 </section>
 
 

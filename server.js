@@ -10,7 +10,7 @@
            
            }  
         ];
- usersIds={"ali.afify93746@gmail.com":0}; 
+      
 // Require Express to run server and routes
   
 const express=require('express');
@@ -240,3 +240,16 @@ app.post('/upload', (req, res) => {
     `);
     
   })
+//   app.get('/home',(req,res)=>{
+      
+//       res.send((home));
+//   });
+// const  home={policy:"policy"};
+ 
+//   app.get('/hom',(req, res)=> {
+     
+//     res.send("hi")
+//  } )
+// Callback function to complete GET '/all'
+
+ 
